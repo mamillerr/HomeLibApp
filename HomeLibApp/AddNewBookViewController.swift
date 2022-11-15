@@ -39,7 +39,7 @@ class AddNewBookViewController: UIViewController {
 //        let statusTF = statusTF.text ?? ""
 //        let locationTF = locationTF.text ?? ""
 //        let imageIV = imageIV.image
-
+        
         saveButton.isEnabled = !nameTF.isEmpty && !authorTF.isEmpty 
 
     }
