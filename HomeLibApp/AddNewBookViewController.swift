@@ -9,14 +9,17 @@ import UIKit
 
 class AddNewBookViewController: UIViewController {
     
-    var book = Book(name: "", author: "", genre: "", language: "", pubHouse: "", translator: "", status: "", location: "", image: "")
+    var book = Book(name: "", author: "", genre: "", pubHouse: "", translator: "", status: "", location: "", image: "")
 
     @IBOutlet weak var nameTF: UITextField!
     @IBOutlet weak var authorTF: UITextField!
-    @IBOutlet weak var pubHouseTF: UITextField!
     @IBOutlet weak var genreTF: UITextField!
-    @IBOutlet weak var saveButton: UIBarButtonItem!
+    @IBOutlet weak var pubHouseTF: UITextField!
+    @IBOutlet weak var translatorTF: UITextField!
     @IBOutlet weak var statusTF: UITextField!
+    @IBOutlet weak var locationTF: UITextField!
+    @IBOutlet weak var imageIV: UIImageView!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,12 +32,15 @@ class AddNewBookViewController: UIViewController {
     private func saveButtonState() {
         let nameTF = nameTF.text ?? ""
         let authorTF = authorTF.text ?? ""
-        let pubHouseTF = pubHouseTF.text ?? ""
-        let genreTF = genreTF.text ?? ""
-        let statusTF = statusTF.text ?? ""
-        
-        saveButton.isEnabled = !nameTF.isEmpty && !authorTF.isEmpty && !pubHouseTF.isEmpty && !genreTF.isEmpty && !statusTF.isEmpty
+//        let genreTF = genreTF.text ?? ""
+//        let languageTF = languageTF.text ?? ""
+//        let pubHouseTF = pubHouseTF.text ?? ""
+//        let translaorTF = translatorTF.text ?? ""
+//        let statusTF = statusTF.text ?? ""
+//        let locationTF = locationTF.text ?? ""
+//        let imageIV = imageIV.image
 
+        saveButton.isEnabled = !nameTF.isEmpty && !authorTF.isEmpty 
 
     }
     
@@ -48,12 +54,13 @@ class AddNewBookViewController: UIViewController {
         
         let name = nameTF.text ?? ""
         let author = authorTF.text ?? ""
-        let pubHouse = pubHouseTF.text ?? ""
         let genre = genreTF.text ?? ""
+        let pubHouse = pubHouseTF.text ?? ""
+        let translator = translatorTF.text ?? ""
         let status = statusTF.text ?? ""
+        let location = locationTF.text ?? ""
         
-        self.book = Book(name: name, author: author, genre: genre, language: "", pubHouse: pubHouse, translator: "", status: status, location: "", image: name)
+        self.book = Book(name: name, author: author, genre: genre, pubHouse: pubHouse, translator: translator, status: status, location: location, image: name)
         
     }
-
 }

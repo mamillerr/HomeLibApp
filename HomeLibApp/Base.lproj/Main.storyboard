@@ -1,29 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OgY-TG-1vS">
-    <device id="retina6_0" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OgY-TG-1vS">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Your Home Library-->
+        <!--Ваша Библиотека-->
         <scene sceneID="71e-G7-9hA">
             <objects>
                 <tableViewController id="oGe-Zb-dD2" customClass="LibViewController" customModule="HomeLibApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="5gb-yN-5rm">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="book" textLabel="j5D-0c-40M" detailTextLabel="dAW-MG-qhE" style="IBUITableViewCellStyleSubtitle" id="7mu-pB-XWO">
-                                <rect key="frame" x="0.0" y="50" width="390" height="43.666667938232422"/>
+                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7mu-pB-XWO" id="GsR-xX-YSc">
-                                    <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="j5D-0c-40M">
@@ -52,7 +53,7 @@
                             <outlet property="delegate" destination="oGe-Zb-dD2" id="3FH-Nc-oOM"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Your Home Library" id="dZn-di-crd">
+                    <navigationItem key="navigationItem" title="Ваша Библиотека" id="dZn-di-crd">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="kBB-6O-kD3">
                             <connections>
                                 <segue destination="WlJ-Ah-Dlc" kind="presentation" id="Rtk-r5-J2C"/>
@@ -69,79 +70,100 @@
             <objects>
                 <viewController id="vX4-sy-3dr" customClass="AddNewBookViewController" customModule="HomeLibApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tu0-WD-FZi">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="fyj-0y-gIe">
-                                <rect key="frame" x="16" y="72" width="358" height="246"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="256" verticalHuggingPriority="253" ambiguous="YES" misplaced="YES" placeholderIntrinsicWidth="150" placeholderIntrinsicHeight="120" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="boa-3w-DZ9">
+                                <rect key="frame" x="16" y="73" width="150" height="119.33333333333331"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="oSD-cJ-RAg"/>
+                                    <constraint firstAttribute="height" constant="119.99999999999997" id="pWE-WE-T4d"/>
+                                </constraints>
+                                <imageReference key="image" image="photo.on.rectangle.angled" catalog="system" variableValue="1"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="fyj-0y-gIe">
+                                <rect key="frame" x="16" y="230" width="361" height="242"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="76F-ua-VRH">
-                                        <rect key="frame" x="0.0" y="0.0" width="358" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="textFieldChanged:" destination="vX4-sy-3dr" eventType="editingDidEnd" id="seA-6k-LgZ"/>
-                                        </connections>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Author" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2KO-1C-lZj">
-                                        <rect key="frame" x="0.0" y="53" width="358" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="textFieldChanged:" destination="vX4-sy-3dr" eventType="editingChanged" id="YTb-bZ-wop"/>
-                                        </connections>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Publishing house" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M41-IC-HMM">
-                                        <rect key="frame" x="0.0" y="106" width="358" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="textFieldChanged:" destination="vX4-sy-3dr" eventType="editingChanged" id="qYV-wf-Hwq"/>
-                                        </connections>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Genre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dhj-nA-nNH">
-                                        <rect key="frame" x="0.0" y="159" width="358" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Жанр" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dhj-nA-nNH">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="34"/>
+                                        <attributedString key="attributedText"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <action selector="textFieldChanged:" destination="vX4-sy-3dr" eventType="editingChanged" id="dR7-Yf-k2F"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Status" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oI7-hj-b4w">
-                                        <rect key="frame" x="0.0" y="212" width="358" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Издатель" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M41-IC-HMM">
+                                        <rect key="frame" x="0.0" y="52" width="361" height="34"/>
+                                        <attributedString key="attributedText"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="textFieldChanged:" destination="vX4-sy-3dr" eventType="editingChanged" id="qYV-wf-Hwq"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Переводчик" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Eir-TS-7lK">
+                                        <rect key="frame" x="0.0" y="104" width="361" height="34"/>
+                                        <attributedString key="attributedText"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Статус" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oI7-hj-b4w">
+                                        <rect key="frame" x="0.0" y="156" width="361" height="34"/>
+                                        <attributedString key="attributedText"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <action selector="textFieldChanged:" destination="vX4-sy-3dr" eventType="editingChanged" id="YnK-EE-QMh"/>
                                         </connections>
                                     </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Расположение" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PF9-gh-iOO">
+                                        <rect key="frame" x="0.0" y="208" width="361" height="34"/>
+                                        <attributedString key="attributedText"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jXd-79-nL0">
-                                <rect key="frame" x="16" y="348" width="358" height="409"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="gsN-BT-n8r">
+                                <rect key="frame" x="181" y="90" width="192.33333333333337" height="86"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Название                    " minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="76F-ua-VRH">
+                                        <rect key="frame" x="0.0" y="0.0" width="192.33333333333334" height="34"/>
+                                        <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                        <attributedString key="attributedText"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="textFieldChanged:" destination="vX4-sy-3dr" eventType="editingDidEnd" id="seA-6k-LgZ"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Автор" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2KO-1C-lZj">
+                                        <rect key="frame" x="0.0" y="52" width="192.33333333333334" height="34"/>
+                                        <attributedString key="attributedText"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="textFieldChanged:" destination="vX4-sy-3dr" eventType="editingChanged" id="YTb-bZ-wop"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="409" id="Rc8-sm-UWH"/>
+                                    <constraint firstAttribute="height" constant="86" id="zCV-gB-DNR"/>
                                 </constraints>
-                            </imageView>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="h1X-yN-a40"/>
                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                         <constraints>
-                            <constraint firstItem="jXd-79-nL0" firstAttribute="leading" secondItem="h1X-yN-a40" secondAttribute="leading" constant="16" id="AGL-wD-Ca3"/>
-                            <constraint firstItem="h1X-yN-a40" firstAttribute="trailing" secondItem="fyj-0y-gIe" secondAttribute="trailing" constant="16" id="e0B-GG-KUz"/>
-                            <constraint firstItem="h1X-yN-a40" firstAttribute="trailing" secondItem="jXd-79-nL0" secondAttribute="trailing" constant="16" id="eg2-FD-oVL"/>
-                            <constraint firstItem="h1X-yN-a40" firstAttribute="bottom" secondItem="jXd-79-nL0" secondAttribute="bottom" constant="30" id="ohe-XQ-JyN"/>
-                            <constraint firstItem="fyj-0y-gIe" firstAttribute="top" secondItem="h1X-yN-a40" secondAttribute="top" constant="16" id="tcY-fA-w7N"/>
-                            <constraint firstItem="fyj-0y-gIe" firstAttribute="leading" secondItem="h1X-yN-a40" secondAttribute="leading" constant="16" id="wPF-Nm-4BU"/>
+                            <constraint firstItem="fyj-0y-gIe" firstAttribute="top" secondItem="h1X-yN-a40" secondAttribute="top" constant="174" id="7al-5i-cvT"/>
+                            <constraint firstItem="fyj-0y-gIe" firstAttribute="leading" secondItem="h1X-yN-a40" secondAttribute="leading" constant="16" id="CBq-GS-yOG"/>
+                            <constraint firstItem="gsN-BT-n8r" firstAttribute="top" secondItem="h1X-yN-a40" secondAttribute="top" constant="34" id="Vd1-aI-8D8"/>
+                            <constraint firstItem="h1X-yN-a40" firstAttribute="trailing" secondItem="fyj-0y-gIe" secondAttribute="trailing" constant="16" id="cBb-eh-9nG"/>
+                            <constraint firstItem="boa-3w-DZ9" firstAttribute="top" secondItem="h1X-yN-a40" secondAttribute="top" constant="17" id="gCN-tq-z8u"/>
+                            <constraint firstItem="h1X-yN-a40" firstAttribute="trailing" secondItem="gsN-BT-n8r" secondAttribute="trailing" constant="19.666666666666629" id="veB-WW-sjd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="PGH-Xd-R6h">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="K30-bp-UOY">
+                        <barButtonItem key="leftBarButtonItem" title="Отмена" id="K30-bp-UOY">
                             <connections>
                                 <segue destination="z6B-9u-K8o" kind="unwind" unwindAction="unwindSegueWithSegue:" id="LPU-fy-A93"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="NGN-V7-ezH">
+                        <barButtonItem key="rightBarButtonItem" title="Сохранить" id="NGN-V7-ezH">
                             <connections>
                                 <segue destination="z6B-9u-K8o" kind="unwind" identifier="saveSegue" unwindAction="unwindSegueWithSegue:" id="2Sh-3W-WiA"/>
                             </connections>
@@ -150,151 +172,200 @@
                     <connections>
                         <outlet property="authorTF" destination="2KO-1C-lZj" id="t0i-DA-AL0"/>
                         <outlet property="genreTF" destination="Dhj-nA-nNH" id="rhx-bJ-bVO"/>
+                        <outlet property="imageIV" destination="boa-3w-DZ9" id="9KF-6z-hJf"/>
+                        <outlet property="locationTF" destination="PF9-gh-iOO" id="54L-hP-Ibm"/>
                         <outlet property="nameTF" destination="76F-ua-VRH" id="bZy-sY-gnQ"/>
                         <outlet property="pubHouseTF" destination="M41-IC-HMM" id="NIj-hA-e3z"/>
                         <outlet property="saveButton" destination="NGN-V7-ezH" id="q0d-9H-guW"/>
                         <outlet property="statusTF" destination="oI7-hj-b4w" id="xfV-Qf-4Bo"/>
+                        <outlet property="translatorTF" destination="Eir-TS-7lK" id="dKd-Xb-jAh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I7N-0J-B95" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="z6B-9u-K8o" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3020" y="6"/>
+            <point key="canvasLocation" x="3020" y="5.6872037914691944"/>
         </scene>
         <!--Book Info View Controller-->
         <scene sceneID="NdL-m6-jXf">
             <objects>
                 <viewController id="xYn-qy-kgc" customClass="BookInfoViewController" customModule="HomeLibApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YB5-rh-17s">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="pq2-ZM-OdM">
+                                <rect key="frame" x="177" y="122" width="200" height="62"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EhI-lh-8EI">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="25"/>
+                                        <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Автор" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8v-VP-UqA">
+                                        <rect key="frame" x="0.0" y="37" width="200" height="25"/>
+                                        <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="DrH-2y-LCG"/>
+                                </constraints>
+                            </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wfb-Vk-ZIG">
                                 <rect key="frame" x="16" y="105" width="133" height="183"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Название" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iu5-Zv-bSw">
-                                <rect key="frame" x="174" y="105" width="200" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="hmq-Kd-Deg">
-                                <rect key="frame" x="16" y="340" width="358" height="329.33333333333326"/>
+                            <stackView opaque="NO" tag="10" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hmq-Kd-Deg">
+                                <rect key="frame" x="16" y="352" width="361" height="441.33333333333326"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Zyz-6a-5xw">
-                                        <rect key="frame" x="0.0" y="0.0" width="358" height="73.333333333333329"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Zle-Am-IKO" userLabel="Genre">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="57.333333333333336"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Автор" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mqH-Ke-Ice">
-                                                <rect key="frame" x="0.0" y="0.0" width="358" height="31.333333333333332"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Жанр" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C7P-ws-ffz">
+                                                <rect key="frame" x="0.0" y="0.0" width="361" height="25"/>
+                                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="22"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gog-2h-Xhc">
-                                                <rect key="frame" x="0.0" y="39.333333333333314" width="358" height="34"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WIL-bw-Go2">
+                                                <rect key="frame" x="0.0" y="33" width="361" height="24.333333333333329"/>
+                                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="kpJ-Bo-QLN">
-                                        <rect key="frame" x="0.0" y="97.333333333333314" width="358" height="61.333333333333343"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hc5-8B-SUs" userLabel="line">
+                                        <rect key="frame" x="0.0" y="77.333333333333314" width="361" height="1"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="J8k-7s-pij"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="kpJ-Bo-QLN" userLabel="Pub House">
+                                        <rect key="frame" x="0.0" y="98.333333333333314" width="361" height="55"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Издатель" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bvg-wb-TJ9">
-                                                <rect key="frame" x="0.0" y="0.0" width="358" height="31.333333333333332"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Издатель" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bvg-wb-TJ9">
+                                                <rect key="frame" x="0.0" y="0.0" width="361" height="22.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7K5-iV-JBt">
-                                                <rect key="frame" x="0.0" y="39.333333333333371" width="358" height="22"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7K5-iV-JBt">
+                                                <rect key="frame" x="0.0" y="30.666666666666686" width="361" height="24.333333333333329"/>
+                                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Zle-Am-IKO">
-                                        <rect key="frame" x="0.0" y="182.66666666666663" width="358" height="61.333333333333343"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OKe-cb-Hx6" userLabel="line">
+                                        <rect key="frame" x="0.0" y="173.33333333333337" width="361" height="1"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="WTz-DL-hHG"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7xw-xT-PkA" userLabel="Translator">
+                                        <rect key="frame" x="0.0" y="194.33333333333337" width="361" height="55"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Жанр" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C7P-ws-ffz">
-                                                <rect key="frame" x="0.0" y="0.0" width="358" height="31.333333333333332"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Переводчик" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U7e-Fv-PN0">
+                                                <rect key="frame" x="0.0" y="0.0" width="361" height="22.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WIL-bw-Go2">
-                                                <rect key="frame" x="0.0" y="39.333333333333371" width="358" height="22"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iYd-il-oTQ">
+                                                <rect key="frame" x="0.0" y="30.666666666666629" width="361" height="24.333333333333329"/>
+                                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6vi-27-hcl">
-                                        <rect key="frame" x="0.0" y="268" width="358" height="61.333333333333314"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="81m-kj-eH3" userLabel="line">
+                                        <rect key="frame" x="0.0" y="269.33333333333337" width="361" height="1"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="07Q-cg-zjn"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6vi-27-hcl" userLabel="Status">
+                                        <rect key="frame" x="0.0" y="290.33333333333337" width="361" height="55"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Статус чтения" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R36-2F-4eP">
-                                                <rect key="frame" x="0.0" y="0.0" width="358" height="31.333333333333332"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Статус" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R36-2F-4eP">
+                                                <rect key="frame" x="0.0" y="0.0" width="361" height="22.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JSn-Xc-7da">
-                                                <rect key="frame" x="0.0" y="39.333333333333371" width="358" height="22"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JSn-Xc-7da">
+                                                <rect key="frame" x="0.0" y="30.666666666666629" width="361" height="24.333333333333329"/>
+                                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aed-7s-FFB" userLabel="line">
+                                        <rect key="frame" x="0.0" y="365.33333333333337" width="361" height="1"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="kD2-E4-MTU"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YcQ-kh-VyT" userLabel="Location">
+                                        <rect key="frame" x="0.0" y="386.33333333333337" width="361" height="55"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Расположение" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RqP-dY-jt3">
+                                                <rect key="frame" x="0.0" y="0.0" width="361" height="22.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MGg-hq-hWI">
+                                                <rect key="frame" x="0.0" y="30.666666666666629" width="361" height="24.333333333333329"/>
+                                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ubI-DD-9dO">
-                                <rect key="frame" x="130" y="690" width="130" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="mVJ-ZA-fQ5"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Save changes"/>
-                                <connections>
-                                    <action selector="saveBUttonPressed:" destination="xYn-qy-kgc" eventType="touchUpInside" id="bVb-qD-26W"/>
-                                    <segue destination="yl0-HV-bTR" kind="unwind" unwindAction="unwindSegueWithSegue:" id="YeK-9b-Btw"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KZP-rD-CcU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <color key="tintColor" name="AccentColor"/>
                         <constraints>
-                            <constraint firstItem="KZP-rD-CcU" firstAttribute="bottom" secondItem="ubI-DD-9dO" secondAttribute="bottom" constant="85" id="BOE-4w-HIP"/>
-                            <constraint firstItem="KZP-rD-CcU" firstAttribute="trailing" secondItem="ubI-DD-9dO" secondAttribute="trailing" constant="130" id="BtV-gq-htK"/>
-                            <constraint firstItem="ubI-DD-9dO" firstAttribute="leading" secondItem="KZP-rD-CcU" secondAttribute="leading" constant="130" id="NcH-Oc-tNI"/>
+                            <constraint firstItem="KZP-rD-CcU" firstAttribute="trailing" secondItem="pq2-ZM-OdM" secondAttribute="trailing" constant="102" id="I1n-H3-Ydn"/>
                             <constraint firstItem="KZP-rD-CcU" firstAttribute="trailing" secondItem="hmq-Kd-Deg" secondAttribute="trailing" constant="16" id="On4-YM-z2y"/>
                             <constraint firstItem="hmq-Kd-Deg" firstAttribute="top" secondItem="KZP-rD-CcU" secondAttribute="top" constant="248.99999999999989" id="QLn-4f-a4D"/>
                             <constraint firstItem="hmq-Kd-Deg" firstAttribute="leading" secondItem="KZP-rD-CcU" secondAttribute="leading" constant="16" id="b55-yo-k8z"/>
+                            <constraint firstItem="pq2-ZM-OdM" firstAttribute="top" secondItem="KZP-rD-CcU" secondAttribute="top" constant="19.000000000000057" id="es5-FC-qnb"/>
+                            <constraint firstItem="KZP-rD-CcU" firstAttribute="trailing" secondItem="pq2-ZM-OdM" secondAttribute="trailing" constant="16" id="q6W-Kc-KKO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="GV9-k0-hT3"/>
                     <connections>
-                        <outlet property="authorTF" destination="Gog-2h-Xhc" id="LuL-PP-Bfk"/>
                         <outlet property="genreTF" destination="WIL-bw-Go2" id="jfE-0L-SGf"/>
                         <outlet property="image" destination="wfb-Vk-ZIG" id="wQU-LP-jcV"/>
+                        <outlet property="locationTF" destination="MGg-hq-hWI" id="Mke-qe-epx"/>
                         <outlet property="pubTF" destination="7K5-iV-JBt" id="CQf-EK-R8O"/>
                         <outlet property="statusTF" destination="JSn-Xc-7da" id="u1Z-vp-PW9"/>
-                        <outlet property="titleLabel" destination="Iu5-Zv-bSw" id="Nz1-HZ-ou2"/>
+                        <outlet property="titleLabel" destination="EhI-lh-8EI" id="ilw-9n-1NN"/>
+                        <outlet property="titleLabel2" destination="R8v-VP-UqA" id="Rmc-Ce-pHm"/>
+                        <outlet property="translatorTF" destination="iYd-il-oTQ" id="q3E-fN-cVX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n1I-Wa-oAT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="yl0-HV-bTR" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="848" y="779"/>
+            <point key="canvasLocation" x="846.56488549618314" y="778.87323943661977"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Oci-uN-AYn">
             <objects>
                 <navigationController id="OgY-TG-1vS" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1Dc-ca-52G">
-                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -311,7 +382,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WlJ-Ah-Dlc" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="x0q-8P-8cm">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="56"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -325,6 +396,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="photo.on.rectangle.angled" catalog="system" width="128" height="98"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
