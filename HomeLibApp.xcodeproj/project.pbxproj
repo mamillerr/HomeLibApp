@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0616DAB62923F55300294193 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0616DAB52923F55300294193 /* MenuViewController.swift */; };
 		061CAE29290ABB9B00283C46 /* AddNewBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061CAE28290ABB9B00283C46 /* AddNewBookViewController.swift */; };
 		06B9603E2906A6BE0061A1CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B9603D2906A6BE0061A1CC /* AppDelegate.swift */; };
 		06B960402906A6BE0061A1CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B9603F2906A6BE0061A1CC /* SceneDelegate.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0616DAB52923F55300294193 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		061CAE28290ABB9B00283C46 /* AddNewBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewBookViewController.swift; sourceTree = "<group>"; };
 		06B9603A2906A6BE0061A1CC /* HomeLibApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeLibApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06B9603D2906A6BE0061A1CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				06B9603F2906A6BE0061A1CC /* SceneDelegate.swift */,
 				06B960512906A8CC0061A1CC /* LibViewController.swift */,
 				06B960552906B5A70061A1CC /* BookInfoViewController.swift */,
+				0616DAB52923F55300294193 /* MenuViewController.swift */,
 				061CAE28290ABB9B00283C46 /* AddNewBookViewController.swift */,
 				06B960532906A9740061A1CC /* Books.swift */,
 				06B960432906A6BE0061A1CC /* Main.storyboard */,
@@ -92,6 +95,8 @@
 			dependencies = (
 			);
 			name = HomeLibApp;
+			packageProductDependencies = (
+			);
 			productName = HomeLibApp;
 			productReference = 06B9603A2906A6BE0061A1CC /* HomeLibApp.app */;
 			productType = "com.apple.product-type.application";
@@ -120,6 +125,9 @@
 				Base,
 			);
 			mainGroup = 06B960312906A6BE0061A1CC;
+			packageReferences = (
+				0616DAA82923B67400294193 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 06B9603B2906A6BE0061A1CC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -150,6 +158,7 @@
 				06B960542906A9740061A1CC /* Books.swift in Sources */,
 				06B960562906B5A70061A1CC /* BookInfoViewController.swift in Sources */,
 				061CAE29290ABB9B00283C46 /* AddNewBookViewController.swift in Sources */,
+				0616DAB62923F55300294193 /* MenuViewController.swift in Sources */,
 				06B960522906A8CC0061A1CC /* LibViewController.swift in Sources */,
 				06B9603E2906A6BE0061A1CC /* AppDelegate.swift in Sources */,
 				06B960402906A6BE0061A1CC /* SceneDelegate.swift in Sources */,
@@ -378,6 +387,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0616DAA82923B67400294193 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 06B960322906A6BE0061A1CC /* Project object */;
 }

@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -69,11 +70,11 @@
             <objects>
                 <viewController id="vX4-sy-3dr" customClass="AddNewBookViewController" customModule="HomeLibApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tu0-WD-FZi">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="fyj-0y-gIe">
-                                <rect key="frame" x="16" y="230" width="354" height="242"/>
+                                <rect key="frame" x="16" y="277" width="354" height="242"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Жанр" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dhj-nA-nNH">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="34"/>
@@ -112,7 +113,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="gsN-BT-n8r">
-                                <rect key="frame" x="174" y="90" width="192.33333333333337" height="86"/>
+                                <rect key="frame" x="174" y="137" width="192.33333333333337" height="86"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Название                    " minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="76F-ua-VRH">
                                         <rect key="frame" x="0.0" y="0.0" width="192.33333333333334" height="34"/>
@@ -137,7 +138,8 @@
                                 </constraints>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="square.and.arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hOm-td-QWc">
-                                <rect key="frame" x="16" y="62.000000000000007" width="150" height="120.66666666666669"/>
+                                <rect key="frame" x="16" y="109" width="150" height="120.66666666666666"/>
+                                <color key="tintColor" systemColor="tintColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="XEj-Lw-hcB"/>
                                     <constraint firstAttribute="height" constant="120" id="XyX-Ke-1Fg"/>
@@ -161,14 +163,10 @@
                     <navigationItem key="navigationItem" id="PGH-Xd-R6h">
                         <barButtonItem key="leftBarButtonItem" title="Отмена" id="K30-bp-UOY">
                             <connections>
-                                <segue destination="z6B-9u-K8o" kind="unwind" unwindAction="unwindSegueWithSegue:" id="LPU-fy-A93"/>
+                                <segue destination="z6B-9u-K8o" kind="unwind" unwindAction="unwindSegueWithSegue:" id="AzZ-dl-UP0"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Сохранить" id="NGN-V7-ezH">
-                            <connections>
-                                <segue destination="z6B-9u-K8o" kind="unwind" identifier="saveSegue" unwindAction="unwindSegueWithSegue:" id="2Sh-3W-WiA"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Сохранить" id="NGN-V7-ezH"/>
                     </navigationItem>
                     <connections>
                         <outlet property="authorTF" destination="2KO-1C-lZj" id="t0i-DA-AL0"/>
@@ -184,7 +182,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I7N-0J-B95" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="z6B-9u-K8o" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3019.0839694656488" y="5.6338028169014089"/>
+            <point key="canvasLocation" x="2821" y="6"/>
         </scene>
         <!--Book Info View Controller-->
         <scene sceneID="NdL-m6-jXf">
@@ -377,6 +375,143 @@
             </objects>
             <point key="canvasLocation" x="846.56488549618314" y="778.87323943661977"/>
         </scene>
+        <!--MenuController-->
+        <scene sceneID="pk9-13-Ybk">
+            <objects>
+                <viewController id="kAA-6i-dRC" userLabel="MenuController" customClass="MenuViewController" customModule="HomeLibApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yr6-7U-TId">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="МЕНЮ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nf7-Mc-BEG">
+                                <rect key="frame" x="153" y="63" width="85" height="39.666666666666657"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="nf7-Mc-BEG" secondAttribute="height" multiplier="17:8" id="KJk-iW-Qb7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="byl-gH-zkp">
+                                <rect key="frame" x="27.333333333333343" y="285.66666666666669" width="338.33333333333326" height="350.00000000000006"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KdD-qz-HKH" userLabel="YourList">
+                                        <rect key="frame" x="0.0" y="0.0" width="338.33333333333331" height="50"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="2SR-g2-gAC">
+                                                <rect key="frame" x="0.0" y="-1.3333333333333321" width="50" height="52"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="KzO-Pm-KDW"/>
+                                                </constraints>
+                                                <imageReference key="image" image="list.bullet.clipboard" catalog="system" symbolScale="default"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AaD-79-HKF">
+                                                <rect key="frame" x="50" y="0.0" width="288.33333333333331" height="50"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Ваш список книг">
+                                                    <fontDescription key="titleFontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="22"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="oGe-Zb-dD2" kind="show" id="5WQ-m0-MAw"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Bd9-9y-C66"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jyQ-5z-kMF" userLabel="Search">
+                                        <rect key="frame" x="0.0" y="100" width="338.33333333333331" height="50"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Tgx-ga-dKu">
+                                                <rect key="frame" x="0.0" y="-2" width="50" height="54.666666666666664"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="n5s-dW-85c"/>
+                                                </constraints>
+                                                <imageReference key="image" image="magnifyingglass" catalog="system" symbolScale="large"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pbc-Dd-zKr">
+                                                <rect key="frame" x="50" y="0.0" width="288.33333333333331" height="50"/>
+                                                <state key="normal" title="Button" image="magnifyingglass" catalog="system"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Поиск">
+                                                    <fontDescription key="titleFontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="22"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="0EC-75-4Zi"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rqg-sn-6MD" userLabel="AddNew">
+                                        <rect key="frame" x="0.0" y="200" width="338.33333333333331" height="50"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="plus.app" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Yz6-XI-eEt">
+                                                <rect key="frame" x="0.0" y="1.6666666666666643" width="50" height="47"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="2gH-ym-2Ai"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t5g-35-Cbc">
+                                                <rect key="frame" x="50" y="0.0" width="288.33333333333331" height="50"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Добавить новую книгу">
+                                                    <fontDescription key="titleFontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="22"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="vX4-sy-3dr" kind="show" id="8kk-h4-Pea"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="clB-5R-CDD"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xev-l0-L6q" userLabel="Favourite">
+                                        <rect key="frame" x="0.0" y="299.99999999999994" width="338.33333333333331" height="50"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="star" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="tl4-6l-FT9">
+                                                <rect key="frame" x="0.0" y="-0.33333333333333215" width="50" height="49.666666666666657"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="A52-YU-nzH"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r5h-nl-GE4">
+                                                <rect key="frame" x="50" y="0.0" width="288.33333333333331" height="50"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Избранное">
+                                                    <fontDescription key="titleFontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="22"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="oxZ-zG-Wc4"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="tintColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="jZK-uw-xG8"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gNJ-T7-xHz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gNJ-T7-xHz" firstAttribute="top" secondItem="nf7-Mc-BEG" secondAttribute="top" constant="40" id="1vv-Ej-uYr"/>
+                            <constraint firstItem="byl-gH-zkp" firstAttribute="centerX" secondItem="gNJ-T7-xHz" secondAttribute="centerX" id="35Q-7r-kQB"/>
+                            <constraint firstItem="byl-gH-zkp" firstAttribute="centerY" secondItem="gNJ-T7-xHz" secondAttribute="centerY" id="nAb-dW-tO5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="4h3-xz-rXv">
+                        <connections>
+                            <outlet property="titleView" destination="Yr6-7U-TId" id="zoo-0B-GiF"/>
+                        </connections>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VBK-Hm-O3F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1569" y="-797"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Oci-uN-AYn">
             <objects>
@@ -386,18 +521,19 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="oGe-Zb-dD2" kind="relationship" relationship="rootViewController" id="O4u-C4-2Ac"/>
+                        <segue destination="kAA-6i-dRC" kind="relationship" relationship="rootViewController" id="5Ie-ot-mjw"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eg4-DQ-8bJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-61" y="7"/>
+            <point key="canvasLocation" x="671" y="-797"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FGP-Qx-R7F">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WlJ-Ah-Dlc" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="voq-Gm-teQ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="x0q-8P-8cm">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -409,19 +545,29 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PVU-q3-sY9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2089" y="6"/>
+            <point key="canvasLocation" x="1873" y="6"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="8kk-h4-Pea"/>
+    </inferredMetricsTieBreakers>
     <resources>
+        <image name="list.bullet.clipboard" catalog="system" width="103" height="128"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <image name="plus.app" catalog="system" width="128" height="114"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <image name="star" catalog="system" width="128" height="116"/>
         <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
